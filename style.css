@@ -1,0 +1,137 @@
+@import url('https://fonts.googleapis.com/css2?family=Baloo+2:wght@400;500;600;700&family=Nunito:wght@400;600;700&display=swap');
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    min-height: 100vh;
+    padding: 24px 12px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Nunito', sans-serif;
+    background: linear-gradient(135deg, #fffaf2, #ffedda, #ffdfbd);
+}
+
+.calculator {
+    width: 100%;
+    max-width: 350px;
+    padding: 24px;
+    border: 1px solid #fff;
+    border-radius: 28px;
+    background: rgba(255, 255, 255, 0.96);
+    box-shadow: 0 18px 45px rgba(190, 120, 55, 0.16);
+}
+
+header {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+header h1 {
+    margin: 0;
+    color: #754b2b;
+    font-family: 'Baloo 2', sans-serif;
+    font-size: 27px;
+}
+
+header p {
+    margin: 0;
+    color: #c27b43;
+    font-size: 13px;
+}
+
+.display {
+    min-height: 100px;
+    padding: 16px;
+    margin-bottom: 18px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: flex-end;
+    overflow-wrap: anywhere;
+    background: #fff6eb;
+    border: 1px solid #f4d9ba;
+    border-radius: 18px;
+}
+
+#expression {
+    min-height: 22px;
+    color: #b47a48;
+    font-size: 14px;
+}
+
+#result {
+    max-width: 100%;
+    color: #654326;
+    font-family: 'Baloo 2', sans-serif;
+    font-size: 34px;
+    font-weight: 700;
+}
+
+.buttons {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 10px;
+}
+
+.buttons button {
+    min-width: 0;
+    min-height: 55px;
+    border: none;
+    border-radius: 15px;
+    background: #fff5e8;
+    color: #754b2b;
+    font-family: 'Nunito', sans-serif;
+    font-size: 18px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: transform 0.15s, background 0.15s;
+}
+
+.buttons button:hover {
+    background: #ffe6c8;
+    transform: translateY(-2px);
+}
+
+.buttons button:active {
+    transform: scale(0.95);
+}
+
+.buttons .special {
+    background: #ffebd5;
+    color: #a65f28;
+}
+
+.buttons .operator {
+    background: #ffd5a6;
+    color: #82471e;
+}
+
+.buttons .equals {
+    background: linear-gradient(135deg, #ffbd78, #f39a4a);
+    color: #fff;
+}
+
+footer {
+    margin-top: 20px;
+    color: #bd824d;
+    text-align: center;
+    font-size: 12px;
+}
+
+@media (max-width: 360px) {
+    .calculator {
+        padding: 17px;
+    }
+
+    .buttons {
+        gap: 7px;
+    }
+
+    .buttons button {
+        min-height: 49px;
+    }
+}
